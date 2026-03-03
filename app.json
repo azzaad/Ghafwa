@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "Ghafwa",
+    "slug": "ghafwa-app",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#020617"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.code8zero.ghafwa",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#020617"
+      },
+      "permissions": [
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "SET_ALARM",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED",
+        "POST_NOTIFICATIONS",
+        "WAKE_LOCK",
+        "INTERNET"
+      ],
+      "intentFilters": [
+        {
+          "action": "android.intent.action.SET_ALARM",
+          "category": ["android.intent.category.DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      "expo-font",
+      "expo-system-ui",
+      "expo-quick-actions",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#0EA5E9"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "extraMavenRepos": ["https://www.jitpack.io"]
+          }
+        }
+      ],
+      [
+        "react-native-android-widget",
+        {
+          "widgets": [
+            {
+              "name": "GhafwaWidget",
+              "label": "غفوة - دورات النوم",
+              "description": "يعرض دورات النوم المتاحة حتى الفجر",
+              "minWidth": "110dp",
+              "minHeight": "110dp",
+              "targetCellWidth": 2,
+              "targetCellHeight": 2,
+              "updatePeriodMillis": 1800000
+            }
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "43786bb1-437e-4859-8ca1-b3da117079d9"
+      }
+    }
+  }
+}
